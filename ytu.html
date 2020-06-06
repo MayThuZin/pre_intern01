@@ -3,6 +3,8 @@
     <head>
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Blinker&amp;display=swap" rel="stylesheet">
         <title> Yangon Technical University Web Page</title>
         <style>
 
@@ -15,7 +17,7 @@
                 background-color: gray;
                 height:45px;
                 font-size: 16px;
-                
+                width:100%;
 
             }
             .navitem{
@@ -26,7 +28,7 @@
             }
             .navitem a{
                 color:white;
-                font-family: Arial, Helvetica, sans-serif;
+                
                 text-decoration: none;
                
             }
@@ -40,11 +42,83 @@
                 padding:10px;
             }
            
-          
+            .navbar {
+                position: absolute;;
+                z-index: 1;
+                background-color: #212529;
+                width:100%;
+                padding:15px;
+              }
+              .navbar a{
+              
+               color: #212529;
+                font-size: 14px;
+                color:white;
+                text-decoration: none;
+               
+              }
+              
+              .dropdown {
+  position: relative;
+  display: inline-block;
+  padding-left:5px;
+}
+.dropdown .dropbtn {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: white;
+ 
+  background-color: inherit;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ padding: 14px 16px;
+  z-index: 1;
+  border-radius: 2px;
+  margin-top:10px;
+  font-size: 14px;
+}
+.department-content
+{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 350px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ padding: 14px 16px;
+  z-index: 1;
+  border-radius: 2px;
+  margin-top:10px;
+  font-size: 14px;
+}
+.research-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ padding: 14px 16px;
+  z-index: 1;
+  border-radius: 2px;
+  margin-top:10px;
+  font-size: 14px;
+}
+.dropdown:hover .dropdown-content ,.dropdown:hover .department-content,.dropdown:hover .research-content{
+  display: block;
+}
            .slideshow{
               background-image: url(http://ytu.edu.mm/wp-content/themes/StrapPress-master/images/bgslide.jpg);
               background-repeat: no-repeat;
           height:500px;
+          z-index: 1;
+          width: 100%;
 
               }
 
@@ -222,6 +296,9 @@
               .links li{
                 color:white;
               }
+             
+
+
         </style>
     </head>
     <body>
@@ -239,80 +316,90 @@
                 <img src="banner.png" class="image">
                 
         </div>
-       
- <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav" >
-        <li class="nav-item active">
-          <a class="nav-link" href="#" style="color:white;" >HOME </a>
-        </li>
-       
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            ABOUT YTU
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Rector's Message</a>
-            <a class="dropdown-item" href="#">History </a>
+        <div class="navbar">
           
+          <a href="#home" style="margin-left:100px;">HOME</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">ABOUT YTU
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <p>Rector's Message</p>
+            <p>History</p>
+            </div>
           </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             ADMISSION
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">UnderGraduate</a>
-              <a class="dropdown-item" href="#">Graduate </a>
+          <div class="dropdown">
+            <button class="dropbtn">ADMISSION
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <p>Undergraduate</p>
+            <p>Graduate</p>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">DEPARTMENT
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="department-content">
+            <p>Architecture</p>
+            <p>Chemistry</p>
+            <p>Chemical Engineering</p>
+            <p>Civil Engineering</p>
+            <p>Computer Engineering and Information Technology</p>
+            <p>English</p>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">ACADEMIC
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <p>Under Graduate</p>
+            <p>Graduate</p>
             
             </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            DEPARTMENT
-            </a>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">NEWS AND EVENTS
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <p>News</p>
+            <p>Event</p>
+            <p>Seminars</p>
             
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            ACADEMIC
-            </a>
-            
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            NEWS AND EVENTS
-            </a>
-            
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            RESEARCH
-            </a>
-            
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            CONFERENCES
-            </a>
-            
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#" style="color:white;" >INTERNATIONAL  AFFAIRS </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#" style="color:white;" >GALLERY </a>
-          </li>
-      </ul>
-    </div>
-  </nav>
-        
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">RESEARCH
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="research-content">
+            <p>Department Research</p>
+            <p>Collaborative Research</p>
+           
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">CONFERENCES
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <p>ICSE</p>
+            <p>NCSE</p>
+           
+            </div>
+          </div>
+          <a href="" style="padding-left:5px;">INTERNATIONAL AFFAIRS</a>
+          <a href="" style="padding-left:5px;">GALLERY</a>
+        </div>
             <div class="body">
                 <div class="slideshow">
                     
                 </div>
+               
                 <div class="mydiv">
                     <div class="left">
                        <b><h3>
